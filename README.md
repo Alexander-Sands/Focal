@@ -7,7 +7,7 @@ Originally recreated as part of a learning experience, then extended with additi
 
 | Template | Technologies | Demo |
 | :--- | :---: | :---: |
-| **Focal** | HTML, CSS | [Live Preview](https://Alexander-Sands.github.io/focal/) |
+| **Focal** | HTML, CSS | [Live Preview](https://alexander-sands.github.io/Focal/) |
 
 ---
 
