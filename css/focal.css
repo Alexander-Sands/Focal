@@ -1,0 +1,557 @@
+/* Start Variables */
+:root {
+    --main-color: #30B576;
+    --section-color: #6e787a;
+    --section-padding: 80px;
+    --main-background: #252F31;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+/* End Variables */
+/* ******************************************************************** */
+/* Start Main Rulez */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {scroll-behavior: smooth}
+body {font-family: 'Open Sans', sans-serif}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto
+}
+/* Small - Medium - Large */
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+ul, ol {
+    list-style: none
+}
+a {
+    text-decoration: none
+}
+/* End Main Rulez */
+/* ******************************************************************** */
+/* Start Components */
+.Style-button-1 {
+    background: none;
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+h1, h2, h3 {
+    color: #555;
+}
+p, q{
+    line-height: 1.7;
+    color: #777
+}
+h2, h3, p, q {
+    margin-bottom: 30px;
+}
+.uppercase, h1, h2, h3, button, input[type="submit"], input[type="button"]{
+    text-transform: uppercase
+}
+.fl-left{
+    float: left
+}
+.txt-align {
+    text-align: center
+}
+.clearfix {
+    clear: both
+}
+.over-hid{
+    overflow: hidden
+}
+/* End Components */
+/* ******************************************************************** */
+/* Start Header */
+/* Start Slider */
+.header .slider {
+    background-color: #2a2b2d;
+    background-image: url("../Images/header.jpg");
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+        -ms-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    background-position: 50% 100%; 
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .slider .intro {
+    text-align: center
+}
+.header .slider .intro h2 {
+    margin: 0 auto 50px;
+    font-size: 45px;
+    max-width: 700px;
+    border-top: 4px solid #FFF;
+    border-bottom: 4px solid #FFF;
+    border-radius: 10px;
+    padding: 20px 30px;
+    color: #FFF
+}
+@media (Max-width: 992px) {
+    .header .slider .intro h2 {
+        font-size: 28px;
+    }
+}
+.header .slider .intro button {
+    min-width: 200px;
+    font-size: 16px;
+    border: 2px solid #FFF;
+    color: #FFF;
+}
+/* End Slider */
+/* Start Navbar */
+.header .navbar {
+    background-color: var(--main-background);
+    padding: 10px 0;
+    color: #FFF
+}
+.header .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .navbar h2 {
+    margin-bottom: 0;
+    font-size: 23px;
+    color: #FFF;
+    text-transform: capitalize;
+}
+.header .navbar h2 .logo {
+    color: #FFF;
+    background-color: #5d696b; 
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 0 6px;
+    border: 1px solid #969696;
+    border-radius: 5px
+}
+.header .navbar h2 span {
+    color: var(--main-color)
+}
+.header .navbar:hover .icon span {
+    background-color: var(--main-color)
+}
+.header .navbar .icon {
+    width: 30px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+@media (Max-width: 992px) {
+    .header .navbar .icon {
+        display: flex
+    }
+}
+.header .navbar .icon span {
+    height: 3px;
+    width: 100%;
+    background-color: #FFF;
+    transition: var(--main-duration);
+}
+.header .navbar .icon span:not(:last-child) {
+    margin-bottom: 5px
+}
+@media (Max-width: 992px) {
+    .header .navbar ul {display: none}
+}
+.header .navbar ul li {
+    float: left;
+    padding-left: 10px
+}
+.header .navbar ul li a {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    transition: var(--main-duration);
+}
+.header .navbar ul li.active a,
+.header .navbar ul li a:hover {
+    color: var(--main-color)
+}
+/* End Navbar */
+/* End Header */
+/* Start Features */
+.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding)
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+@media (max-width: 767px) {
+    .features .container .feat {
+        text-align: center;
+    }
+}
+/* End Features */
+/* Start About Me */
+.about-me {
+    background-color: var(--section-background)
+}
+.about-me .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-me .image {
+    background-image: url('../Images/about-me.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    border-right: 20px solid #FFF;
+    width: 40%;
+}
+.about-me .info {
+    /* padding: var(--section-padding) calc(var(--section-padding) - 20px); */
+    padding: var(--section-padding) 60px;
+    width: 60%
+}
+@media (max-width: 991px) {
+    .about-me .image {
+        display: none;
+    }
+    .about-me .info {
+        width: 100%;
+    }
+}
+.about-me .info .hobbies {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(221px, 1fr));
+    grid-gap: 30px;
+}
+@media (max-width: 991px) {
+    .about-me .info .hobbies {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+.about-me .info .hobbies .content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between
+}
+.about-me .info .hobbies .content i {
+    width: 50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    color: #0073d6
+}
+@media (max-width: 767px) {
+    .about-me .info {
+        text-align: center;
+    }
+    .about-me .info .hobbies .content {
+        flex-direction: column;
+    }
+    .about-me .info .hobbies .content i {
+        margin: 20px auto;
+    }
+}
+.about-me .info .hobbies .content .text h3 {
+    margin-bottom: 15px
+}
+.about-me .info .hobbies .content .text p {
+    margin-bottom: 0
+}
+/* End About Me */
+/* Start My Skills */
+.my-skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.my-skills .skills, 
+.my-skills .progress {
+    width: calc(50% - 20px)
+}
+.my-skills .skills {
+    margin-right: 40px;
+}
+@media (max-width: 767px) {
+    .my-skills .skills {
+        margin-right: 0;
+    }
+}
+.my-skills .progress .technique h3 {
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.my-skills .progress .technique div {
+    background-color: #F2F2F2;
+    height: 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #dedede;
+}
+.my-skills .progress .technique div:not(:last-child) {
+    margin-bottom: 30px;
+}
+.my-skills .progress .technique div span {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--main-color);
+    color: #FFF;
+    font-weight: bold
+}
+@media (max-width: 767px) {
+    .my-skills .skills, 
+    .my-skills .progress {
+        width: 100%
+    }
+    .my-skills .skills {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+/* End My Skills */
+/* Start Resume */
+.resume {
+    background-color: var(--section-background);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+.resume::after {
+    content: "";
+    border-width: 30px;
+    border-style: solid;
+    border-color: var(--section-background) transparent transparent transparent;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.resume .container {
+    padding-right: 60px;
+    padding-left: 60px;
+}
+/* Start Resume */
+/* Start My Education & Experience */
+.my-education {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.my-education .main,
+.my-education .exp {
+    width: calc(50% - 20px);
+}
+.my-education .main {
+    margin-right: 40px
+}
+@media (max-width: 767px) {
+    .my-education h2 {
+        text-align: center;
+    }
+    .my-education .main,
+    .my-education .exp {
+        width: calc(100%);
+        text-align: center;
+    }
+    .my-education .main {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+.my-education .main p:last-of-type {
+    margin-bottom: 0
+}
+.my-education .exp .certifcate:not(:last-child) {    
+    margin-bottom: 60px
+}
+.my-education .exp .certifcate h3 {
+    margin-bottom: 20px
+}
+.my-education .exp .certifcate span {
+    display: block;
+    margin-bottom: 20px
+}
+.my-education .exp .certifcate span:first-of-type {
+    color: #666
+}
+.my-education .exp .certifcate span:last-of-type {
+    background-color: var(--main-color);
+    color: #FFF;
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px 5px
+}
+.my-education .exp .certifcate hr {
+    margin: 10px 0 20px;
+    background-color: #999;
+    height: 1px;
+    border: 0
+}
+.my-education .container hr {
+    margin: 60px 0 90px;
+    background-color: #999;
+    height: 2px;
+    border: 0
+}
+/* End My Educations & Experience */
+/* Start Testimonials */
+.testimonials {
+    background-color: var(--section-background);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.testimonials .container {
+    padding-right: 60px;
+    padding-left: 60px;
+}
+.testimonials q {
+    font: italic bold 16px/1.8 Arial , Tahoma;
+    display: inline-block;
+}
+.testimonials ul li {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--main-color);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--main-duration);
+    margin: 0 3px;
+}
+.testimonials ul li.atcive,
+.testimonials ul li:hover {
+    background-color: var(--main-color)
+}
+/* End Testimonials */
+/* Start Portfolio */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.portfolio .our-work {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.portfolio .our-work > div img {
+    width: 100%;
+    background-color: #FFF;
+    border: 3px solid #BBB;
+    box-shadow: 10px 10px 10px #888;
+    border-radius: 20px;
+}
+/* End Portfolio */
+/* Start Contact Me */
+.contact {
+    background-color: var(--main-background);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.contact .info,
+.contact form {
+    width: calc(50% - 20px);
+}
+.contact .info {
+    margin-right: 40px;
+}
+@media (max-width: 767px) {
+    .contact .info,
+    .contact form {
+        width: 100%;
+    }
+    .contact .info {
+        margin-right: 0;
+    }
+}
+.contact h2 {
+    color: #FFF;
+}
+.contact p {
+    color: #a2aeb7;
+}
+.contact p strong {
+    color: #e5f2fd;
+    margin-right: 20px;
+}
+.contact form label {
+    display: block;  
+    color: #a2aeb7;
+    margin: 10px 0
+}
+.contact form .input,
+.contact form textarea { 
+    background-color: #4B5557;
+    color: #FFF;
+    padding: 10px;
+    border: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+.contact form .input {
+    margin-bottom: 10px;
+}
+.contact form textarea {
+    margin-bottom: 20px;
+    height: 150px;
+}
+.contact form input[type="submit"] {
+    background-color: #191E22;
+    color: #FFF;
+    padding: 10px 50px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .contact form input[type="submit"] {
+        margin: auto;
+        width: 100%;
+    }
+}
+/* End Contact Me */
+/* Start Footer */
+.footer {
+    background-color: #191E22;
+    padding: 20px 0;
+}
+.footer p {
+    color: #FFF;
+    margin-bottom: 10px;
+}
+.footer ul li {
+    color: #AAA;
+    display: inline-block;
+    font-size: 14px;
+    transition: var(--main-duration);
+    cursor: pointer
+}
+.footer ul li:hover {
+    color: #FFF
+}
+/* End Footer */
