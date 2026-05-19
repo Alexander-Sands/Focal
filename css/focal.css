@@ -143,7 +143,8 @@ h2, h3, p, q {
     margin-bottom: 0;
     font-size: 23px;
     color: #FFF;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
+    text-transform: uppercase;
 }
 .header .navbar h2 .logo {
     color: #FFF;
@@ -510,8 +511,14 @@ h2, h3, p, q {
     color: #FFF;
     padding: 10px;
     border: 0;
+    border: 3px solid transparent;
     width: 100%;
     border-radius: 10px;
+    outline: none;
+}
+.contact form .input:focus,
+.contact form textarea:focus { 
+    border: 3px solid #fff;
 }
 .contact form .input {
     margin-bottom: 10px;
@@ -519,6 +526,7 @@ h2, h3, p, q {
 .contact form textarea {
     margin-bottom: 20px;
     height: 150px;
+    resize: none;
 }
 .contact form input[type="submit"] {
     background-color: #191E22;
