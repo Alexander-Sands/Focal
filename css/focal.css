@@ -91,7 +91,7 @@ h2, h3, p, q {
 /* Start Slider */
 .header .slider {
     background-color: #2a2b2d;
-    background-image: url("../Images/header.jpg");
+    background-image: url("../images/header.jpg");
     -webkit-background-size: cover;
        -moz-background-size: cover;
         -ms-background-size: cover;
@@ -227,7 +227,7 @@ h2, h3, p, q {
     flex-wrap: wrap;
 }
 .about-me .image {
-    background-image: url('../Images/about-me.jpg');
+    background-image: url('../images/about-me.jpg');
     background-size: cover;
     background-position: 50% 50%;
     border-right: 20px solid #FFF;
